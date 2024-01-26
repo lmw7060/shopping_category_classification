@@ -47,7 +47,7 @@ for i in range(len(tokened_X)):
 
 x_pad = pad_sequences(tokened_X,29)
 
-model = load_model('./models/news_category_classification_model_0.9050343036651611.h5')
+model = load_model('./models/news_category_classification_model_0.945984959602356.h5')
 preds = model.predict(x_pad)
 
 predicts = []

@@ -58,8 +58,8 @@ for l in ca:  #정치인지, 경제인지...
         time.sleep(0.5)
         for i in range(1, 41):
             try:
-                title = driver.find_element('xpath',
-                        '//*[@id="content"]/div[1]/div[2]/div/div[{}]/div/div/div[2]/div[1]/a'.format(i)).text
+                driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
+                title = driver.find_element('xpath','//*[@id="content"]/div[1]/div[2]/div/div[{}]/div/div/div[2]/div[1]/a'.format(i)).text
                 title = re.compile('[^가-힣]').sub(' ', title)
                 titles.append(title)
             except:
